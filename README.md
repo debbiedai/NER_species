@@ -16,9 +16,9 @@ The introduction of [Colab](https://colab.research.google.com/?utm_source=scs-in
 - beautifulsoup4 (`pip install beautifulsoup4`)
 
 ### Preprocess
-Before training, please run `preprocess.py` and `same_len.py` to process the dataset.
+Before training, please run `preprocess_species.py` and `same_len.py` to process the dataset.
 
-`preprocess.py`
+`preprocess.py` (put this python file with the input xml files in the same directory)
 - split our data into 10 folds (10 folds cross validation)
 - convert .xml file to .tsv
 - convert .tsv to .txt (generate with/without text name .txt file)
@@ -32,7 +32,7 @@ Before training, please run `preprocess.py` and `same_len.py` to process the dat
 Put the dataset (The directory contain train_dev.txt, devel.txt, test.txt and labels.txt) and `args.json`, `run_ner.ipynb` and `utils_ner.ipynb` on Colab.
 The `args.json` stores the setting argument when training. (Remind: "max_seq_length" is the same as "max_len" in same_len.py) Because of 10 folds cross validation, please change the setting of args when you train the next fold.
 
-### The result of 10 folds cross validation
+### The result of BIOBERT with 10 folds cross validation
 
 | Test Fold      |    Test Precision (%)   |    Test Recall (%)   |    Test F1 (%)   |
 |----------------|:-----------------------:|:--------------------:|:----------------:|
@@ -47,6 +47,23 @@ The `args.json` stores the setting argument when training. (Remind: "max_seq_len
 | fold_8         |          91.48          |         74.78        |       82.29      |
 | fold_9         |          88.88          |         74.57        |       81.11      |
 | Average        |          83.75          |         86.35        |       84.67      |
+
+### The result of SR4GN
+
+| Test Fold      |    Test Precision (%)   |    Test Recall (%)   |    Test F1 (%)   |
+|----------------|:-----------------------:|:--------------------:|:----------------:|
+| fold_0         |          58.00          |         65.16        |       61.37      |
+| fold_1         |          74.04          |         79.38        |       76.61      |
+| fold_2         |          46.82          |         85.51        |       60.51      |
+| fold_3         |          51.93          |         83.75        |       64.11      |
+| fold_4         |          43.11          |         77.05        |       55.29      |
+| fold_5         |          60.22          |         70.66        |       65.03      |
+| fold_6         |          62.50          |         90.90        |       74.07      |
+| fold_7         |          56.88          |         67.39        |       61.69      |
+| fold_8         |          56.47          |         84.95        |       67.84      |
+| fold_9         |          61.24          |         68.10        |       64.48      |
+| Average        |          57.12          |         77.28        |       65.10      |
+
 
 ### Postprocess
 
