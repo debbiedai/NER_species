@@ -69,4 +69,4 @@ Download the [GNormPlus](https://www.ncbi.nlm.nih.gov/research/bionlp/Tools/gnor
 | Average        |          57.12          |         77.28        |       65.10      |
 
 ### Compare
-In `compare.py`, we will remove space between sentences in test_predictions.txt (The prediction of Biobert), and preprocess the output of SR4GN. Finally, comparing the result of Biobert and SR4GN.
+In `compare.py`, we will remove space between sentences in test_predictions.txt (The prediction of Biobert), and preprocess the output of SR4GN. Finally, compare the result of Biobert and SR4GN.
